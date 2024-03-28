@@ -5,8 +5,7 @@ Code to fit an encoding GLM to neural data from the Runyan lab in python using t
 
 1. download the repository 
 2. cd into the location of the repo
-3. python -m venv GLM_python
-4. For windows: GLM_python\Scripts\activate | For Mac: source GLM_python/bin/activate
-5. pip install -r requirements.txt
+3. conda env create -f environment.yml
+4. conda activate Python_GLM
 
 ## Run the wrapper functions in the attached jupityer notebook and fit your models! 
