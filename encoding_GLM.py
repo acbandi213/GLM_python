@@ -668,8 +668,7 @@ def pointwise_deviance(y_true, y_pred, loss_type = 'poisson'):
     elif loss_type == 'gaussian':
         dev_pt =  (y_true - y_pred)**2
     elif loss_type == 'binominal':
-        dev_pt =  2.0 * (-y_true*np.log(stable(y_pred)) - (1.-y_true)*np.log(stable(1.-y_pred))
-                         +y_true*np.log(stable(y_true)) + (1.-y_true)*np.log(stable(1.-y_true)))
+        dev_pt =  2.0 * (-y_true*np.log(stable(y_pred)) - (1.-y_true)*np.log(stable(1.-y_pred))+y_true*np.log(stable(y_true)) + (1.-y_true)*np.log(stable(1.-y_true)))
     return dev_pt
 
 
@@ -809,7 +808,6 @@ def parse_group_from_feature_names(feature_names):
         group_ind += [i_group]*this_size
             
     return group_size, group_name, np.array(group_ind)
-
 
 
 def make_groug_matrix(group_size):
